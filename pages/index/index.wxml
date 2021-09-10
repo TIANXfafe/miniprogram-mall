@@ -1,5 +1,17 @@
-<view>
-  首页
-  <text class="iconfont icon-fukuantongzhi"></text>
+<!-- 搜索框 -->
+<view class="pyg_index">
+  <SearchInput></SearchInput>
 </view>
-  
+<!-- 轮播图 -->
+<view class="index_swiper">
+  <swiper autoplay indicator-dots circular>
+    <swiper-item
+      wx:for="{{swiperList}}"
+      wx:key="goods_id"
+    >
+      <navigator>
+        <image mode="widthFix" src="{{item.image_src}}"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
